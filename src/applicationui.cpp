@@ -75,6 +75,7 @@ void ApplicationUI::exportContacts()
     //starting contact service
     ContactService cs;
     ContactListFilters filter;
+    filter.setLimit(0);
     QList<Contact> allContacts = cs.contacts(filter);
 
     //creating new file and writing out
